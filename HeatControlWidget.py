@@ -5,6 +5,7 @@ from Heater import Heater
 from Gastherme import Gastherme
 from Notaus import Notaus
 
+
 class HeatControlWidget(QWidget):
     #Küche
     slotReferenceValueKitchen = pyqtSlot(int)
@@ -35,6 +36,7 @@ class HeatControlWidget(QWidget):
         self.controller = Controller(self)
         self.gastherme = Gastherme(self)
         self.notaus = Notaus(self)
+
 
         ###Notaus###
         self.notaus.signalNotaus.connect(self.slotNotaus)
